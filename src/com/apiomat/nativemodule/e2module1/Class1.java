@@ -31,6 +31,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.apiomat.nativemodule.*;
 
+import com.apiomat.nativemodule.e2module2.Class2;
 
 import com.apiomat.nativemodule.basics.*;
 import com.apiomat.nativemodule.AuthState;
@@ -49,7 +50,7 @@ import com.apiomat.nativemodule.AuthState;
     requiredUserRoleWrite=UserRole.Owner, restrictResourceAccess=false,
     allowedRolesCreate={}, allowedRolesRead={},
     allowedRolesWrite={}, allowedRolesGrant={})
-public class Class1 extends AbstractClientDataModel implements IModel<Class1>
+public class Class1 extends Class2
 {
     /**
      * Contains the name of the module that this model belongs to

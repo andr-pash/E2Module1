@@ -44,7 +44,7 @@ import com.apiomat.nativemodule.AbstractRestResource;
  * 
  */
 @Module( description="", 
-         usedModules={}, securityPermissions = {} )
+         usedModules={"E2Module2"}, securityPermissions = {} )
 public class E2Module1 implements IModule
 {
     static IApplicationConfigProxy APP_CONFIG_PROXY;
