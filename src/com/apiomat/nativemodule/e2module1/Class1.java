@@ -34,6 +34,7 @@ import com.apiomat.nativemodule.*;
 import com.apiomat.nativemodule.e2module2.Class2;
 
 import com.apiomat.nativemodule.basics.*;
+import com.apiomat.nativemodule.e2module2.*;
 import com.apiomat.nativemodule.AuthState;
 /**
 * Generated class for your Class1 data model
@@ -62,6 +63,7 @@ public class Class1 extends Class2
     public static final String MODEL_NAME = "Class1";
 
     /** class specific attributes */
+    private com.apiomat.nativemodule.e2module2.Class2 class2Attribute = null;
     /**
      * Protected constructor; to create a new instance, use the createObject() method
      */
@@ -84,6 +86,36 @@ public class Class1 extends Class2
     public String getModelName( )
     {
         return MODEL_NAME;
+    }
+
+    public com.apiomat.nativemodule.e2module2.Class2 getClass2Attribute()
+    { 
+        if(this.class2Attribute == null)
+        {
+            /* do this by reflection to be backward compartible */
+            try
+            {
+                Method m = AbstractClientDataModel.class.getMethod( "loadReference", String.class,  Class.class );
+                this.class2Attribute =  ( com.apiomat.nativemodule.e2module2.Class2 ) m.invoke( this, "class2Attribute", com.apiomat.nativemodule.e2module2.Class2.class );
+            }
+            catch ( NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e )
+            {
+                 //silently ignored
+            }
+        }   
+        return this.class2Attribute;
+    }
+
+    public void postClass2Attribute( final com.apiomat.nativemodule.e2module2.Class2 refData )
+    {
+        addReference( "class2Attribute", refData );
+        this.class2Attribute = refData;
+    }
+
+    public void removeClass2Attribute( final com.apiomat.nativemodule.e2module2.Class2 refData )
+    {
+        removeReference( "class2Attribute", refData );
+        this.class2Attribute = null;
     }
 
 }
